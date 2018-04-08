@@ -1,0 +1,59 @@
+html {
+    height: 100%;
+}
+body {
+    background-color: aqua;
+    height: 100%;
+    margin: 0;
+}
+
+#pageMain {
+    display: grid;
+    background-color: blueviolet;
+    height: 100%;
+    padding: 0;
+    /* grid-template-columns: repeat (3, 1fr); */
+    /* grid-template-rows: 4fr; */
+    grid-gap: 5px;
+    /* grid-auto-rows: 1fr minmax(100px, auto-fill) ; */
+    
+    grid-template-areas: 
+        "navTopArea  navTopArea     navTopArea      navTopArea      navTopArea"
+        "navLeftArea myContentArea  myContentArea   myContentArea   navRightArea"
+        "navFootArea navFootArea    navFootArea     navFootArea     navFootArea";
+    
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: 5% 1fr 10%;
+    justify-content: center;
+    align-content: center;
+   
+}
+
+#pageMainTop {
+    grid-area: navTopArea;
+    background-color: rgb(212, 210, 188);
+}
+
+#pageMainLeft {
+    grid-area: navLeftArea;
+    background-color: rgb(48, 156, 89);
+}
+
+#pageMainRight {
+    grid-area: navRightArea;
+    background-color: rgb(245, 167, 167);
+}
+
+#pageMainContent {
+    grid-area: myContentArea;    
+    background-color: rgb(204, 230, 241);
+}
+
+#pageMainFoot {
+    grid-area: navFootArea;
+    background-color: rgb(194, 186, 117);
+}
+
+.mainParts:hover {
+    background-color: rgb(214, 91, 42);
+}
